@@ -26,7 +26,7 @@ SCARA-Robot-Automated-MEA-Protocol-Server/
 └── config/
     ├── robot_constants_config.json          # Robot motion parameters
     └── table.yaml                           # Spatial coordinate definitions
-
+```
 # Protocol to Command Converter
 `protocol_to_command_converter.py` is the core engine of this project, consisting of 3,823 lines and approximately 60 functions.
 It converts user-designed protocol JSON files into a machine-executable command list (`cmd_list.json`).
