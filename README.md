@@ -26,19 +26,6 @@ SCARA-Robot-Automated-MEA-Protocol-Server/
 └── config/
     ├── robot_constants_config.json          # Robot motion parameters
     └── table.yaml                           # Spatial coordinate definitions
-```
-**Data Flow:**
-```
-User designs protocol via GUI (views/)
-            ↓
-protocol_model.py stores protocol as structured data
-            ↓
-protocol_controller.py sequences execution order
-            ↓
-protocol_to_command_converter.py converts protocol into robot commands
-            ↓
-cmd_list.json (command list) → Hitbot SCARA arm executes
-```
 
 # Protocol to Command Converter
 `protocol_to_command_converter.py` is the core engine of this project, consisting of 3,823 lines and approximately 60 functions.
