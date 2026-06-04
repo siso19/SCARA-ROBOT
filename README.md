@@ -27,8 +27,8 @@ SCARA-Robot-Automated-MEA-Protocol-Server/
     └── table.yaml                           # Spatial coordinate definitions
 ```
 # Protocol to Command Converter
-`protocol_to_command_converter.py` is the core engine of this project, consisting of 3,823 lines and approximately 60 functions.
-It converts user-designed protocol JSON files into a machine-executable command list (`cmd_list.json`).
+`protocol_to_command_converter.py` converts user-designed protocol JSON files into a machine-executable command list (`cmd_list.json`).
+It parses each Process and Order sequentially, translates 12 action types (Equip, Eject, Pick, Place, Take, Apply, Mix, Measure, Open, Close, Wait, Dispose) into robot commands, calculates actual XYZ coordinates from grid positions, and tracks tip usage and liquid volumes throughout the experiment.
 
 # Config
 Robot behavior is defined by two configuration files.
