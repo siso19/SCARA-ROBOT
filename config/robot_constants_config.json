@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-01-27T12:29:10.955294",
+  "position": {
+    "absolute_min_z_position": -395.0,
+    "initial_position": {
+      "scara": {
+        "x": 420.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "servo": {
+        "angle": 60.0
+      },
+      "gripper": {
+        "distance": 10.0,
+        "speed": 50.0
+      }
+    }
+  },
+  "speed": {
+    "default_speed": 200.0,
+    "single_axis_speed": 50.0,
+    "move_offset_low_speed": 20.0,
+    "tip_equip_z_axis_speed": 50.0,
+    "tip_equip_descent_speed": 20.0,
+    "tip_equip_fast_z_axis_speed": 100.0,
+    "pre_surface_detection_z_axis_speed": 100.0,
+    "initial_position_move_to_top_speed": 100.0,
+    "initial_position_speed": 100.0,
+    "long_distance_z_axis_speed": 50.0,
+    "long_distance_single_axis_speed": 50.0,
+    "multi_axis_intermediate_speed": 50.0,
+    "surface_detection_descent_speed": 5.0,
+    "surface_detection_rise_speed": 100.0,
+    "surface_detection_return_speed": 100.0,
+    "aspiration_descent_speed": 1.0,
+    "mea_spit_diagonal_move_speed": 5.0,
+    "mea_storage_internal_speed": 5.0
+  },
+  "timeout": {
+    "movement_completion_timeout": 2.0,
+    "scara_descent_wait_timeout": 30.0,
+    "surface_detection_timeout": 30.0
+  },
+  "retry": {
+    "tip_equip_max_retries": 3,
+    "retry_delay": 1.0
+  },
+  "offset_distance": {
+    "tip_equip_z_offset": 7.0,
+    "tip_equip_fast_z_offset": 10.0,
+    "descent_start_check_distance": 0.5,
+    "dynamic_surface_offset": 5.0,
+    "surface_height_margin": 3.0,
+    "surface_detection_rise_distance": -0.3,
+    "surface_detection_return_distance": 5.0,
+    "surface_detection_descent_step": -0.5,
+    "mea_apply_z_offset": 6.0,
+    "mea_take_z_offset": 1.0,
+    "align_distance": 2.1,
+    "take_z_offset_after_aspiration": 0.45,
+    "aspiration_post_z_offset": 1.0,
+    "aspiration_post_x_offset": 1.2,
+    "mea_spit_90degree_move_distance": 2.1,
+    "angled_pipette_offset": 2.7,
+    "angled_pipette_post_dispense_z_offset": 3.0
+  },
+  "wait_time": {
+    "liquid_spit_pre_wait": 0.2,
+    "liquid_spit_post_wait": 0.2,
+    "tip_equip_wait_time": 0.5,
+    "general_check_interval": 0.1,
+    "pause_state_check_interval": 0.1,
+    "command_interval_wait": 0.1,
+    "surface_detection_check_interval": 0.1,
+    "spit_minor_amount_pre_wait": 0.1
+  },
+  "surface_detection": {
+    "post_aspiration_minor_spit_amount": 30
+  },
+  "daken_parameters": {
+    "surface_detection_mode": {
+      "first_suction": 2000,
+      "air_pressure_prep": 60000,
+      "second_suction": 10,
+      "tip_eject": 10484,
+      "air_detection_speed": 2599
+    },
+    "aspiration_mode": {
+      "first_suction": 2000,
+      "air_pressure_prep": 8192,
+      "second_suction": 10,
+      "tip_eject": 10484,
+      "air_detection_speed": 2599
+    },
+    "suction_speed": {
+      "start_speed": 50,
+      "target_speed": 300
+    },
+    "speed_advanced": {
+      "low_speed": 6000,
+      "high_speed": 118000,
+      "accel_time": 15,
+      "decel_time": 14
+    }
+  },
+  "threshold": {
+    "consecutive_movement_threshold": 0.5,
+    "single_axis_movement_threshold": 0.1,
+    "short_distance_threshold": 20.0
+  },
+  "tolerance": {
+    "position_target": 0.5,
+    "angle_target": 0.5,
+    "inverse_kinematics_validation": 0.5,
+    "gripper_rotation": 0.05
+  },
+  "grid": {
+    "default_tip_grid": {
+      "rows": 8,
+      "cols": 12
+    },
+    "mea_tip_grid": {
+      "rows": 8,
+      "cols": 2
+    }
+  },
+  "defaults": {
+    "aspiration_amount_default": 100,
+    "spit_amount_default": 50
+  },
+  "shake": {
+    "method": "circular",
+    "distance": 0.7,
+    "speed": 200.0,
+    "count": 30,
+    "axis": "y",
+    "diameter": 4.0
+  },
+  "mea_stack": {
+    "gripper": {
+      "pick_offset": 6.0,
+      "place_offset_mea2": 0.0,
+      "place_offset_mea_measure": 2.5
+    },
+    "max_counts": {
+      "mea1": 5,
+      "mea2": 1,
+      "mea3": 5,
+      "mea-measure": 1
+    },
+    "initial_counts": {
+      "mea1": 0,
+      "mea2": 0,
+      "mea3": 0,
+      "mea-measure": 0
+    }
+  },
+  "gripper": {
+    "open_distance": 20.0,
+    "close_distance": 0.0,
+    "speed": 50.0
+  }
+}

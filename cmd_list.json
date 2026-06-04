@@ -1,0 +1,262 @@
+[
+  {
+    "type": "protocol_info",
+    "name": "Protocol_Info",
+    "description": "Empty protocol data"
+  },
+  {
+    "type": "initialization",
+    "action": "move_to_top",
+    "function": "ScaraInterface.move_to_top",
+    "parameters": {},
+    "description": "Move to top position"
+  },
+  {
+    "type": "initialization",
+    "action": "move_xy_position",
+    "function": "ScaraInterface.move_end_effector",
+    "parameters": {
+      "end_effector": "gripper",
+      "xyz": [
+        420,
+        0,
+        0
+      ],
+      "tip": false,
+      "speed": 100.0
+    },
+    "description": "Move to initial position (420, 0, 0)"
+  },
+  {
+    "type": "initialization",
+    "action": "set_end_effector",
+    "function": "ServorInterface.move_to_angle",
+    "parameters": {
+      "angle": 60.0
+    },
+    "description": "Set end-effector to initial position (servo angle: 60.0 degrees)"
+  },
+  {
+    "type": "process_start",
+    "name": "Process_001",
+    "description": "Default Process"
+  },
+  {
+    "type": "equip",
+    "action": "set_end_effector",
+    "function": "ServorInterface.move_to_angle",
+    "parameters": {
+      "angle": 60
+    },
+    "description": "Set end-effector to pipette",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "equip",
+    "action": "move_to_top",
+    "function": "ScaraInterface.move_to_top",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        0.5399999999999991,
+        184.12,
+        0
+      ],
+      "tip": false,
+      "speed": 100.0
+    },
+    "description": "Move to top position: [0.5399999999999991, 184.12]",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "equip",
+    "action": "move_xy_position",
+    "function": "ScaraInterface.move_end_effector",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        0.5399999999999991,
+        184.12,
+        0
+      ],
+      "tip": false,
+      "speed": 100.0,
+      "calibration_angles": {
+        "angle1": 6.337500095367432,
+        "angle2": 137.79299926757812,
+        "end_effector": "pipette",
+        "with_tip": false
+      },
+      "tool_name": "tip1",
+      "grid_row": 0,
+      "grid_col": 0
+    },
+    "description": "Move X,Y to tip position: [0.5399999999999991, 184.12]",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "equip",
+    "action": "move_z_position",
+    "function": "ScaraInterface.move_end_effector",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        0.5399999999999991,
+        184.12,
+        -291.48
+      ],
+      "tip": false,
+      "speed": 50.0
+    },
+    "description": "Fast Z-axis move to tip position: -291.48",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "equip",
+    "action": "move_z_position",
+    "function": "ScaraInterface.move_end_effector",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        0.5399999999999991,
+        184.12,
+        -301.48
+      ],
+      "tip": false,
+      "speed": 10.0
+    },
+    "description": "Move Z-axis to tip position: -301.48",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "equip",
+    "action": "tip_equip_with_retry",
+    "function": "CommandExecutor._execute_tip_equip_with_retry",
+    "parameters": {
+      "max_retries": 3,
+      "retry_delay": 1.0,
+      "z_offset": 7
+    },
+    "description": "Attach tip with retry logic",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "equip",
+    "action": "move_to_top",
+    "function": "ScaraInterface.move_to_top",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        0.5399999999999991,
+        184.12,
+        0
+      ],
+      "tip": true
+    },
+    "description": "Move to top position: [0.5399999999999991, 184.12]",
+    "process_name": "Process_001",
+    "order_index": 0
+  },
+  {
+    "type": "dispose",
+    "action": "set_end_effector",
+    "function": "ServorInterface.move_to_angle",
+    "parameters": {
+      "angle": 60
+    },
+    "description": "Set end-effector to pipette",
+    "process_name": "Process_001",
+    "order_index": 1
+  },
+  {
+    "type": "dispose",
+    "action": "move_to_top",
+    "function": "ScaraInterface.move_to_top",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "tip": true
+    },
+    "description": "Move to top from current position",
+    "process_name": "Process_001",
+    "order_index": 1
+  },
+  {
+    "type": "dispose",
+    "action": "move_xy_position",
+    "function": "ScaraInterface.move_end_effector",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        -150.9,
+        -277.92,
+        0
+      ],
+      "tip": true,
+      "speed": 100.0
+    },
+    "description": "Move X,Y to Liquid Trash",
+    "process_name": "Process_001",
+    "order_index": 1
+  },
+  {
+    "type": "dispose",
+    "action": "move_z_position",
+    "function": "ScaraInterface.move_end_effector",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        -150.9,
+        -277.92,
+        -259.48
+      ],
+      "tip": true,
+      "speed": 20.0
+    },
+    "description": "Move Z-axis to Liquid Trash",
+    "process_name": "Process_001",
+    "order_index": 1
+  },
+  {
+    "type": "dispose",
+    "action": "dispose_waste",
+    "function": "DakenInterface.spit_liquid",
+    "parameters": {
+      "amount": 0
+    },
+    "description": "dispose_waste",
+    "process_name": "Process_001",
+    "order_index": 1
+  },
+  {
+    "type": "dispose",
+    "action": "move_to_top",
+    "function": "ScaraInterface.move_to_top",
+    "parameters": {
+      "end_effector": "pipette",
+      "xyz": [
+        -150.9,
+        -277.92,
+        0
+      ],
+      "tip": true
+    },
+    "description": "Return to top position",
+    "process_name": "Process_001",
+    "order_index": 1
+  },
+  {
+    "type": "process_end",
+    "name": "Process_001"
+  }
+]
