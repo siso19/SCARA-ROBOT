@@ -1,0 +1,200 @@
+settings:
+  tools:
+    tip-trash:  # 500mL
+      size:
+        dia: 106.02
+        height: 130.02
+    liq-trash:    # SL-Bot1002_GlassBottle
+      size:
+        dia: 35.02
+        height: 140.02
+    mea:
+      size:
+        x: 83
+        y: 34
+        z: 12.90
+      origin-0:
+        x: 10.0
+        y: 12.5
+        z: -12.00
+      distance:
+        x: 9
+        y: 9
+      rows: 8
+      cols: 2
+      dia: 6
+    tipbox:
+      size:
+        x: 85.52
+        y: 129.02
+        z: 92.02
+      origin-0:
+        x: 11.25
+        y: 14
+        z: 7
+      distance:
+        x: 9
+        y: 9
+      rows: 8
+      cols: 12
+      dia: 7
+    tube5mL:
+      size:
+        dia: 14
+        height: 56.52
+    tube15mL:
+      size:
+        dia: 16
+        height: 118.62
+    tube50mL:
+      size:
+        dia: 29
+        height: 114.02
+    bottle:
+      size:
+        dia: 70.02
+        height: 140.02
+
+  table:
+    name: "default_table"
+    version: "1.0.0"
+    description: "MEA Table Basic Settings"
+    table:
+      size:
+        x: 570
+        y: 710
+      # robot link3's center position from table's LEFT-BOTTOM-CORNER
+      center:
+        x: 312    #258
+        y: 355
+        z: 400.5
+    # ---- custom tools ----
+    # Tip Box ------------------------------------------------------------
+    tip1:
+      tool: tipbox
+      position:
+        x: -10.71
+        y: 170.12
+    tip2:
+      tool: tipbox
+      position:
+        x: 89.29
+        y: 170.12
+    tip3:
+      tool: tipbox
+      position:
+        x: 189.29
+        y: 170.12
+    # MEA ------------------------------------------------------------
+    mea1: # for MEA-cham-store : 2
+      tool: mea
+      position:
+        x: 193.00
+        y: -161.80
+        z: -398.5
+    mea2: # for MEA-cham-pos
+      tool: mea
+      position:
+        x: 193.00
+        y: -227.00
+        z: -398.0   # orginal : -398.5
+    mea3: # for MEA-cham-store : 1
+      tool: mea
+      position:
+        x: 193.00
+        y: -291.50
+        z: -398.5
+        #y: -292.20
+    # SOURCE ------------------------------------------------------------
+    # #1 tube_bracket ---
+    source1:
+      tool: tube5mL
+      position:
+        x: 129
+        y: -177.82
+    source2:
+      tool: tube5mL
+      position:
+        x: 129
+        y: -237.82
+    source3:
+      tool: tube50mL
+      position:
+        x: 129
+        y: -297.82
+    # #2 tube_bracket ---
+    source4:
+      tool: tube5mL
+      position:
+        x: 69
+        y: -177.82
+    source5:
+      tool: tube5mL
+      position:
+        x: 69
+        y: -237.82
+    source6:
+      tool: tube50mL
+      position:
+        x: 69
+        y: -297.82
+    # #3 tube_bracket ---
+    source7:
+      tool: tube5mL
+      position:
+        x: 9
+        y: -177.82
+    source8:
+      tool: tube5mL
+      position:
+        x: 9
+        y: -237.82
+    source9:
+      tool: tube15mL
+      position:
+        x: 9
+        y: -297.82
+    # #4 tube_bracket ---
+    source10:
+      tool: tube15mL
+      position:
+        x: -51
+        y: -177.82
+    source11:
+      tool: tube15mL
+      position:
+        x: -51
+        y: -237.82
+    source12:
+      tool: tube15mL
+      position:
+        x: -51
+        y: -297.82
+
+    # bottle ---
+    source13:
+      tool: bottle  # SL-Bot1002_GlassBottle
+      position:
+        x: -150.90
+        y: -197.92         # -232.93 + 70.02 / 2
+    # ---- Fixed tools ----
+    tip-trash:
+      tool: tip-trash     # 500mL
+      position:
+        x: -127.95      # -180.96 + 106.02 / 2
+        y: 235.03      # 182.02 + 106.02 / 2
+    liq-trash:
+      tool: liq-trash   # SL-Bot1002_GlassBottle v2:1
+      position:
+        x: -150.90    #  (-185.91 + 70.02 / 2)
+        y: -277.92    #  (-312.93 + 70.02 / 2)
+        z: -397.5
+    # MEA-measure ------------------------------------------------------------
+    mea-measure:
+      tool: mea
+      position:
+        x: 170.04
+        y: -16.99
+        z: -343.50
+
+      
