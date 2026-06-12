@@ -6,9 +6,11 @@
 
 SCARA-ROBOT is the server architecture developed for our SCARA robotic arm-based MEA biosensor automation system. It translates declarative experimental protocols designed through a visual interface into sequential robot motion commands and executes them using a SCARA robotic arm, liquid handling pump, gripper, and electrochemical measurement system. The system supports the fully automated execution of surface functionalization, bacterial sample handling, PBS washing, CV/EIS measurements, and other related experimental procedures without human intervention.
 
+What distinguishes this system is not the automation itself but the abstraction layer that decouples what the experiment intends from how the robot executes. Researchers express protocols through twelve composable actions (Equip, Eject, Pick, Place, Take, Apply, Mix, Measure, Open, Close, Wait, and Dispose), and the system automatically expands them into the full sequence of low-level motion commands while preserving complete execution traceability.
+
 # Key Features
 
-**Declarative Protocol Abstraction.** Researchers design experiments by visually selecting wells, tubes, and chambers, and the system translates these declarative selections into sequential robot motion commands. Twelve composable action primitives serve as the building blocks of experimental workflow, eliminating the need for low-level robot programming.
+**Declarative Protocol Abstraction.** RResearchers design experiments by visually selecting wells, tubes, and chambers, and the system translates these declarative selections into sequential robot motion commands. Twelve composable action primitives serve as the building blocks of any experimental workflow, eliminating the need for low-level robot programming.
 
 **Hardware-Independent Configuration.** All motion parameters and spatial coordinates are externalized to `robot_constants_config.json` and `table.yaml`. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
 
@@ -18,7 +20,7 @@ SCARA-ROBOT is the server architecture developed for our SCARA robotic arm-based
 
 **Accessibility for Domain Scientists.** Biologists without robotics programming experience can design complex automation protocols by visually selecting wells and tubes through the GUI. Internal identifiers (e.g., Source IDs) are decoupled from user-defined descriptions (e.g., Source Descriptions), allowing meaningful labeling without affecting protocol data stability.
 
-**Complete Execution Traceability.** Every protocol is stored as a machine-readable command specification (cmd_list.json) that records each movement, parameter, and hardware interface call. This intermediate file enables experiment reproduction, debugging, and post-hoc analysis by preserving the full execution history of the automated workflow.
+**Complete Execution Traceability.** Every protocol is stored as a machine-readable command specification (`cmd_list.json`) that records each movement, parameter, and hardware interface call. This intermediate file enables experiment reproduction, debugging, and post-hoc analysis by preserving the full execution history of the automated workflow.
 
 
 # Architecture
@@ -46,7 +48,7 @@ SCARA-ROBOT/
 
 **`config/`** holds the hardware configuration files that decouple environment-dependent values from the source code. It defines the robot's motion parameters and the spatial coordinates of the workspace, allowing the same codebase to be adapted to different hardware setups without code changes.
 
-**`execution/`** holds the hardware execution engine. It reads the `cmd_list.json` command specification and drives the actual hardware SCARA robotic arm, liquid handling pump, servo motor, gripper, electrochemical measurement system, and JIG fixture — in synchronized order, with safety mechanisms such as surface detection and return-to-home behavior.
+**`execution/`** holds the hardware execution engine. It reads the `cmd_list.json` command specification and drives the actual hardware in synchronized order, including the SCARA robotic arm, liquid handling pump, servo motor, gripper, electrochemical measurement system, and JIG fixture. It also incorporates safety mechanisms such as surface detection and return-to-home behavior.
 
 
 # Protocol to Command Converter
@@ -61,6 +63,6 @@ SCARA-ROBOT/
 
 # License
 
-This work is released under the MIT License. See the [LICENSE](LICENSE) file for the full text. The MIT License permits unrestricted use, modification, and distribution — including for commercial purposes — provided that the original copyright notice and license text are preserved.
+This work is released under the MIT License. See the [LICENSE](LICENSE) file for the full text. The MIT License permits unrestricted use, modification, and distribution, including for commercial purposes, provided that the original copyright notice and license text are preserved.
 
 Copyright (c) 2026 iMEBS Lab
