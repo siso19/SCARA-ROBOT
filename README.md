@@ -44,7 +44,7 @@ SCARA-ROBOT/
     └── action_commander.py
 ```
 
-**[`MVC_architecture/`](MVC_architecture/)** holds the protocol design layer, structured around the Model-View-Controller pattern. The **[`Models/`](Model/)** directory manages the protocol data, the [`Views/`](View/)** directory provides the visual interface for selecting targets such as MEA, TIP, SOURCE, and JIG, and the [`Controllers/`](Controllers/)** directory coordinates the two and synchronizes protocol state.
+**[`MVC_Architecture/`](MVC_Architecture/)** holds the protocol design layer, structured around the Model-View-Controller pattern. The **[`Models/`](Model/)** directory manages the protocol data, the [`Views/`](View/)** directory provides the visual interface for selecting targets such as MEA, TIP, SOURCE, and JIG, and the [`Controllers/`](Controllers/)** directory coordinates the two and synchronizes protocol state.
 
 **[`Config/`](Config/)** holds the hardware configuration files that decouple environment-dependent values from the source code. It defines the robot's motion parameters and the spatial coordinates of the workspace, allowing the same codebase to be adapted to different hardware setups without code changes.
 
