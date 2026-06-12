@@ -12,7 +12,7 @@ What distinguishes this system is not the automation itself but the abstraction 
 
 **Declarative Protocol Abstraction.** RResearchers design experiments by visually selecting wells, tubes, and chambers, and the system translates these declarative selections into sequential robot motion commands. Twelve composable action primitives serve as the building blocks of any experimental workflow, eliminating the need for low-level robot programming.
 
-**Hardware-Independent Configuration.** All motion parameters and spatial coordinates are externalized to `robot_constants_config.json` and `table.yaml`. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
+**Hardware-Independent Configuration.** All motion parameters and spatial coordinates are externalized to **[`robot_constants_config.json`](robot_constants_config.json)**  and `table.yaml`. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
 
 **MVC-Based Separation of Concerns.** The protocol design layer is structured around the Model-View-Controller pattern, ensuring that protocol state is managed in a single, consistent location. This separation enables independent evolution of data structures, user interfaces, and coordination logic, making the system extensible to new experimental workflows.
 
