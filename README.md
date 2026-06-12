@@ -44,11 +44,11 @@ SCARA-ROBOT/
     └── action_commander.py
 ```
 
-**[`mvc_architecture/`](mvc_architecture/)** holds the protocol design layer, structured around the Model-View-Controller pattern. The `models/` directory manages the protocol data, the `views/` directory provides the visual interface for selecting targets such as MEA, TIP, SOURCE, and JIG, and the `controllers/` directory coordinates the two and synchronizes protocol state.
+**[`MVC_architecture/`](MVC_architecture/)** holds the protocol design layer, structured around the Model-View-Controller pattern. The `models/` directory manages the protocol data, the `views/` directory provides the visual interface for selecting targets such as MEA, TIP, SOURCE, and JIG, and the `controllers/` directory coordinates the two and synchronizes protocol state.
 
-**[`config/`](config/)** holds the hardware configuration files that decouple environment-dependent values from the source code. It defines the robot's motion parameters and the spatial coordinates of the workspace, allowing the same codebase to be adapted to different hardware setups without code changes.
+**[`Config/`](Config/)** holds the hardware configuration files that decouple environment-dependent values from the source code. It defines the robot's motion parameters and the spatial coordinates of the workspace, allowing the same codebase to be adapted to different hardware setups without code changes.
 
-**[`execution/`](execution/)** holds the hardware execution engine. It reads the `cmd_list.json` command specification and drives the actual hardware in synchronized order, including the SCARA robotic arm, liquid handling pump, servo motor, gripper, electrochemical measurement system, and JIG fixture. It also incorporates safety mechanisms such as surface detection and return-to-home behavior.
+**[`Execution/`](Execution/)** holds the hardware execution engine. It reads the `cmd_list.json` command specification and drives the actual hardware in synchronized order, including the SCARA robotic arm, liquid handling pump, servo motor, gripper, electrochemical measurement system, and JIG fixture. It also incorporates safety mechanisms such as surface detection and return-to-home behavior.
 
 
 # Protocol to Command Converter
