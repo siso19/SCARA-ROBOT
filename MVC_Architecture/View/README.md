@@ -11,11 +11,11 @@ Implements the `MEAGroupWidget` for the MEA (Microelectrode Array) target group.
 
 **source_group_widget.py**
 
-Implements the `SourceGroupWidget` for the SOURCE target group, arranging three source grids (SOURCE1, SOURCE2, SOURCE3) vertically, with each grid using a 3 rows × 1 col structure to represent a column of source tubes. It is a thin specialization that delegates the heavier logic such as Source Desc mapping and volume tracking to `UnifiedGroupWidget`, intended for cases where a simple non-YAML instantiation is required.
+Implements the `SourceGroupWidget` for the SOURCE target group, arranging three source grids (SOURCE1, SOURCE2, SOURCE3) vertically, with each grid using a 3 rows × 1 col structure to represent a column of source tubes. It is a thin specialization intended for cases where a simple non-YAML instantiation is required. The heavier logic, such as Source Desc mapping and volume tracking, is delegated to UnifiedGroupWidget.
 
 **tip_group_widget.py**
 
-Implements the `TIPGroupWidget` for the TIP target group, managing three pipette tip boxes (TIP1, TIP2, TIP3), each with a standard 8 rows × 12 cols layout matching a 96-position tip rack. The user can either explicitly designate which tips to use during the `Equip` action, or let the converter automatically allocate tips from unused positions when no selection is made.
+Implements the `TIPGroupWidget` for the TIP target group, managing three pipette tip boxes (TIP1, TIP2, TIP3), each with a standard 8 rows × 12 cols layout matching a 96-position tip rack. The user can either explicitly designate which tip to use during the `Equip` action, or let the converter automatically allocate tip from unused positions when no selection is made.
 
 
 **unified_group_widget.py**
