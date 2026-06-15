@@ -31,16 +31,16 @@ The system follows a three-stage pipeline. The MVC-based protocol design layer c
 SCARA-ROBOT/
 ├── README.md                          
 ├── LICENSE                            ← MIT License
-├── protocol_to_command_converter.py   ← Protocol → cmd_list.json conversion
+├── protocol_to_command_converter.py   ← Protocol to cmd_list.json 
 ├── cmd_list.json                      ← Example output specification
-├── mvc_architecture/                  ← Protocol design layer
-│   ├── controller/
-│   ├── model/
-│   └── view/
-├── config/                            ← Hardware configuration
+├── MVC_architecture/                  ← Protocol design layer
+│   ├── Controller/
+│   ├── Model/
+│   └── View/
+├── Config/                            ← Hardware configuration
 │   ├── robot_constants_config.json
 │   └── table.yaml
-└── execution/                         ← Hardware execution engine
+└── Execution/                         ← Hardware execution engine
     └── action_commander.py
 ```
 
