@@ -11,7 +11,7 @@ Implements the `MEAGroupWidget` for the MEA (Microelectrode Array) target group.
 
 **source_group_widget.py**
 
-Implements the `SourceGroupWidget` for the SOURCE target group, arranging three source grids (SOURCE1, SOURCE2, SOURCE3) vertically, with each grid using a 3 rows × 1 col structure to represent a column of source tubes. It is a thin specialization intended for cases where a simple non-YAML instantiation is required. The heavier logic, such as Source Desc mapping and volume tracking, is delegated to 'UnifiedGroupWidget'.
+Implements the `SourceGroupWidget` for the SOURCE target group, arranging three source grids (SOURCE1, SOURCE2, SOURCE3) vertically, with each grid using a 3 rows × 1 col structure to represent a column of source tubes. It is a thin specialization intended for cases where a simple non-YAML instantiation is required. The heavier logic, such as Source Desc mapping and volume tracking, is delegated to `UnifiedGroupWidget`.
 
 **tip_group_widget.py**
 
