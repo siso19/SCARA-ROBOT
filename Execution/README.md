@@ -1,5 +1,6 @@
 # Execution
 Execution forms the hardware execution layer of the SCARA robot server, responsible for reading the command file produced by the Controller layer and carrying out each command on the physical robot system. It operates independently of the MVC Architecture, serving as the final stage where abstract protocol commands are translated into real hardware actions.
+
 **action_commander.py**
 
 Implements the integrated execution engine that sequentially reads the `cmd_list.json` command file and operates all robot interfaces in a coordinated order. It consists of CommandParser for JSON command parsing and validation, InterfaceManager for managing the connection lifecycle of the six hardware interfaces (SCARA, DAKEN, Servo, Gripper, Measurement, JIG), MeasurementInterface for connecting to the electrochemical measurement system (CV, EIS), CommandExecutor that routes commands to eighteen action handlers through a function mapping table, and ActionCommander as the top-level class that orchestrates the entire system. It incorporates execution stability mechanisms such as thread-based dynamic liquid surface detection, tip-equip retry logic, pause, stop, and resume control, and automatic return to a safe home position. All motion constants are loaded from `robot_constants_config.json`, decoupling hardware dependencies from the code.
