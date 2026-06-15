@@ -1,5 +1,5 @@
 # Model
-Models form the data layer of the MVC Architecture, holding the in-memory representation of the experimental protocol being designed. It notifies the rest of the system of state changes through Qt signals, and has no knowledge of the UI or robot hardware, dealing only with protocol structure.
+Model form the data layer of the MVC_Architecture, holding the in-memory representation of the experimental protocol being designed. It notifies the rest of the system of state changes through Qt signals, and has no knowledge of the UI or robot hardware, dealing only with protocol structure.
 
 **protocol_model.py**
 
