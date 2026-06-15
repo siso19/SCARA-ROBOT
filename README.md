@@ -12,7 +12,7 @@ What distinguishes this system is not the automation itself but the abstraction 
 
 **Declarative Protocol Abstraction.** Researchers design experiments by visually selecting wells, tubes, and chambers, and the system translates these declarative selections into sequential robot motion commands. Twelve composable action primitives serve as the building blocks of any experimental workflow, eliminating the need for low-level robot programming.
 
-**Hardware-Independent Configuration.** All motion parameters and spatial coordinates are externalized to **[`robot_constants_config.json`](Config)** and **[`table.yaml`](Config)**. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
+**Hardware-Independent Configuration.** All motion parameters and spatial coordinates are externalized to **[`robot_constants_config.json/`](Config/)** and **[`table.yaml/`](Config/)**. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
 
 **MVC-Based Separation of Concerns.** The protocol design layer is structured around the Model-View-Controller pattern, ensuring that protocol state is managed in a single, consistent location. This separation enables independent evolution of data structures, user interfaces, and coordination logic, making the system extensible to new experimental workflows.
 
@@ -33,7 +33,7 @@ SCARA-ROBOT/
 ├── LICENSE                            ← MIT License
 ├── protocol_to_command_converter.py   ← Protocol to cmd_list.json 
 ├── cmd_list.json                      ← Example output specification
-├── MVC_architecture/                  ← Protocol design layer
+├── MVC_Architecture/                  ← Protocol design layer
 │   ├── Controller/
 │   ├── Model/
 │   └── View/
@@ -44,7 +44,7 @@ SCARA-ROBOT/
     └── action_commander.py
 ```
 
-**[`MVC_Architecture/`](MVC_Architecture/)** holds the protocol design layer, structured around the Model-View-Controller pattern. The **[`Model/`](MVC_Architecture/Model)** directory manages the protocol data, the **[`View/`](MVC_Architecture/View/)** directory provides the visual interface for selecting targets such as MEA, TIP, SOURCE, and JIG, and the **[`Controller/`](MVC_Architecture/Controller)** directory coordinates the two and synchronizes protocol state.
+**[`MVC_Architecture/`](MVC_Architecture/)** holds the protocol design layer, structured around the Model-View-Controller pattern. The **[`Model/`](MVC_Architecture/Model/)** directory manages the protocol data, the **[`View/`](MVC_Architecture/View/)** directory provides the visual interface for selecting targets such as MEA, TIP, SOURCE, and JIG, and the **[`Controller/`](MVC_Architecture/Controller/)** directory coordinates the two and synchronizes protocol state.
 
 **[`Config/`](Config/)** holds the hardware configuration files that decouple environment-dependent values from the source code. It defines the robot's motion parameters and the spatial coordinates of the workspace, allowing the same codebase to be adapted to different hardware setups without code changes.
 
