@@ -10,17 +10,29 @@ What distinguishes this system is not the automation itself but the abstraction 
 
 # Key Features
 
-**Declarative Protocol Abstraction.** Researchers design experiments by visually selecting wells, tubes, and chambers, and the system translates these declarative selections into sequential robot motion commands. Twelve composable action primitives serve as the building blocks of any experimental workflow, eliminating the need for low-level robot programming.
+**Declarative Protocol Abstraction.** 
 
-**Hardware-Independent Configuration.** All motion parameters and spatial coordinates are externalized to **[`robot_constants_config.json/`](Config/)** and **[`table.yaml/`](Config/)**. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
+Researchers design experiments by visually selecting wells, tubes, and chambers, and the system translates these declarative selections into sequential robot motion commands. Twelve composable action primitives serve as the building blocks of any experimental workflow, eliminating the need for low-level robot programming.
 
-**MVC-Based Separation of Concerns.** The protocol design layer is structured around the Model-View-Controller pattern, ensuring that protocol state is managed in a single, consistent location. This separation enables independent evolution of data structures, user interfaces, and coordination logic, making the system extensible to new experimental workflows.
+**Hardware-Independent Configuration.** 
 
-**End-to-End Automated Workflow.** Surface functionalization, sample handling, washing, and electrochemical measurement (CV/EIS) are executed as a single uninterrupted pipeline, producing complete experimental results rather than isolated action demonstrations.
+All motion parameters and spatial coordinates are externalized to **[`robot_constants_config.json/`](Config/)** and **[`table.yaml/`](Config/)**. This separation allows the same codebase to be applied to different hardware setups or workbench layouts without modifying the source code, directly supporting experimental reproducibility.
 
-**Accessibility for Domain Scientists.** Biologists without robotics programming experience can design complex automation protocols by visually selecting wells and tubes through the GUI. Internal identifiers (e.g., Source IDs) are decoupled from user-defined descriptions (e.g., Source Descriptions), allowing meaningful labeling without affecting protocol data stability.
+**MVC-Based Separation of Concerns.** 
 
-**Complete Execution Traceability.** Every protocol is stored as a machine-readable command specification (cmd_list.json) that records each movement, parameter, and hardware interface call. This intermediate file enables experiment reproduction, debugging, and post-hoc analysis by preserving the full execution history of the automated workflow.
+The protocol design layer is structured around the Model-View-Controller pattern, ensuring that protocol state is managed in a single, consistent location. This separation enables independent evolution of data structures, user interfaces, and coordination logic, making the system extensible to new experimental workflows.
+
+**End-to-End Automated Workflow.** 
+
+Surface functionalization, sample handling, washing, and electrochemical measurement (CV/EIS) are executed as a single uninterrupted pipeline, producing complete experimental results rather than isolated action demonstrations.
+
+**Accessibility for Domain Scientists.** 
+
+Biologists without robotics programming experience can design complex automation protocols by visually selecting wells and tubes through the GUI. Internal identifiers (e.g., Source IDs) are decoupled from user-defined descriptions (e.g., Source Descriptions), allowing meaningful labeling without affecting protocol data stability.
+
+**Complete Execution Traceability.** 
+
+Every protocol is stored as a machine-readable command specification (cmd_list.json) that records each movement, parameter, and hardware interface call. This intermediate file enables experiment reproduction, debugging, and post-hoc analysis by preserving the full execution history of the automated workflow.
 
 
 # Architecture
