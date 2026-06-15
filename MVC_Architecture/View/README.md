@@ -1,5 +1,5 @@
 # Views
-Views form the user interface layer of the MVC_Architecture, consisting of PySide6-based widgets for protocol design. Each target group (MEA, TIP, SOURCE, JIG) is provided as an interactive grid widget that allows the user to visually select wells, tubes, and chambers, and all group widgets share a common interface so the Controller can handle them uniformly.
+Views form the user interface layer of the MVC Architecture, consisting of PySide6-based widgets for protocol design. Each target group (MEA, TIP, SOURCE, JIG) is provided as an interactive grid widget that allows the user to visually select wells, tubes, and chambers, and all group widgets share a common interface so the Controller can handle them uniformly.
 
 **jig_group_widget.py**
 
