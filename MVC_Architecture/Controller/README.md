@@ -1,5 +1,5 @@
 # Controllers
-Controllers form the coordination layer of the MVC Architecture, receiving user actions from the View, performing the corresponding operations on the Model, and ensuring that the View is refreshed whenever the Model state changes. By routing all protocol modifications through Controllers, the Model is preserved as the single source of truth.
+Controllers form the coordination layer of the `MVC_Architecture`, receiving user actions from the View, performing the corresponding operations on the Model, and ensuring that the View is refreshed whenever the Model state changes. By routing all protocol modifications through Controllers, the Model is preserved as the single source of truth.
 
 **protocol_controller.py**
 
