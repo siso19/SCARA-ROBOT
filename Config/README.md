@@ -3,7 +3,9 @@ Config is the directory that holds the external configuration files required for
 Config consists of robot_constants_config.json and table.yaml.
 
 **robot_constants_config.json**
+
 robot_constants_config.json is the file that centrally manages all motion parameters governing how the SCARA robot moves. It contains the numerical constants that define the robot's physical behavior, including initial position and angle, movement speeds, wait times, retry policies, fine offsets, surface detection parameters, Daken pump settings, gripper operation, and MEA stack management. ProtocolToCommandConverter reads these values during initialization and uses them to determine speeds appropriate to the movement distance and axis combination when generating commands, and to apply the Z-offsets required for aspirate and dispense operations. Because this file is externalized, hardware calibration and experimental conditions can be tuned for a new environment simply by editing this file, without any code changes.
 
 **table.yaml**
+
 table.yaml is the file that defines the spatial structure of the robot workspace. It specifies the physical dimensions and absolute coordinates of every tool on the work table, including tip boxes, tubes, MEA chambers, and trash containers, serving as the geometric reference that translates abstract protocol references such as SOURCE3 or MEA1 into concrete XYZ coordinates. ProtocolToCommandConverter first looks up the base position and tool type from table.yaml, and for grid-based tools, calculates the actual coordinates of the selected (row, col) cell using the tool's origin and spacing information. This separation keeps experimental protocols hardware-independent, so that whenever the physical workspace is reconfigured, only `table.yaml` needs to be updated for the system to adapt to the new environment without code changes.
