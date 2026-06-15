@@ -53,7 +53,7 @@ SCARA-ROBOT/
 
 # Protocol to Command Converter
 
-`protocol_to_command_converter.py` converts user-designed protocols into a machine-executable command list (cmd_list.json). It parses each Process and Order sequentially, translates twelve action types into robot commands, calculates actual XYZ coordinates from grid positions, applies adaptive speed selection based on movement distance and axis combinations, and tracks tip usage and liquid volumes throughout the experiment.
+protocol_to_command_converter.py converts user-designed protocols into a machine-executable command list (cmd_list.json). It parses each Process and Order sequentially, translates twelve action types into robot commands, calculates actual XYZ coordinates from grid positions, applies adaptive speed selection based on movement distance and axis combinations, and tracks tip usage and liquid volumes throughout the experiment.
 
 
 # cmd_list.json
